@@ -15,7 +15,7 @@ import 'package:small_project/feature/create_user/bloc/create_user_cubit/create_
 import 'package:small_project/injection_container.dart';
 
 class CreateUser extends StatefulWidget {
-  CreateUser({Key? key}) : super(key: key);
+  const CreateUser({Key? key}) : super(key: key);
 
   @override
   State<CreateUser> createState() => _CreateUserState();

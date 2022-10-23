@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 import 'package:small_project/core/feature/bloc/theme_bloc/theme_cubit.dart';
-import 'package:small_project/feature/create_user/view/create_user.dart';
+import 'package:small_project/feature/home/view/home_screen.dart';
 import 'package:small_project/injection_container.dart';
 
 void main() {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           builder: (_, theme) {
             return MaterialApp(
               debugShowCheckedModeBanner: false,
-              home: CreateUser(),
+              home: HomePage(),
               theme: theme,
             );
           });
