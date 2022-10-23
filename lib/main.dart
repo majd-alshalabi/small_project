@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:small_project/feature/home/view/home_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:sizer/sizer.dart';
+import 'package:small_project/core/feature/bloc/theme_bloc/theme_cubit.dart';
+import 'package:small_project/feature/create_user/view/create_user.dart';
+import 'package:small_project/injection_container.dart';
 
 void main() {
+  init();
   runApp(const MyApp());
 }
 
@@ -11,9 +16,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Flutter Demo',
-      home: HomePage(),
-    );
+    return Sizer(builder: (context, orientation, deviceType) {
+      return BlocBuilder<ThemeCubit, ThemeData>(
+          bloc: sl<ThemeCubit>(),
+          builder: (_, theme) {
+            return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              home: CreateUser(),
+              theme: theme,
+            );
+          });
+    });
   }
 }
