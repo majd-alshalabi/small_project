@@ -11,7 +11,7 @@ class IdentityHelper {
 
   final DatabaseTables _db = DatabaseTables();
 
-  getMyIdentity() async {
+  Future<List<MyIdentity>> getMyIdentity() async {
     Database? db = await _db.createDb();
     List<MyIdentity>? identity;
 

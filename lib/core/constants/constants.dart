@@ -114,3 +114,5 @@ class Insets {
 class Assets {
   static const placeHolder = "assets/images/user_avatar_image.png";
 }
+
+enum ToWhereShouldINavigateAfterSplash { toHome, toLogin }

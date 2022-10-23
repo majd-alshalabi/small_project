@@ -80,10 +80,10 @@ class ApplicationAppBar extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => Size.fromHeight(
         bottom == null
             ? orientation == Orientation.portrait
-                ? 8.h
+                ? 7.h
                 : 14.w
             : orientation == Orientation.portrait
-                ? 13.h
+                ? 12.h
                 : 25.w,
       );
 }
